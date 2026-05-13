@@ -97,3 +97,12 @@ Now click on "Select model" it will show one popup, but don't record now you nee
 
 When you click on record it will be red and show "🎙️ Stop recording" that say you are recording your voice for talking to the model.<br>
 When you finish to talk click on "🎙️ Stop recording" and now be patient because that can take some time for generate a output audio. (1 min or more!)
+
+**Step CUDA users**: Manual activate CUDA
+
+Actually the script use only cpu, for change that you need to go in the data.json. (Stop the program before!)
+
+<p align="center"><img src="images/json-configuration.png"></p>
+In the line 2 we have the "device-map", that exactly what we need to change!<br>
+In default the "device-map" is set to "cpu" but if you want to use CUDA for better performance you need to replace it by "cuda:0" for use CUDA.<br>
+Now you can use your graphic card for better performance!!
